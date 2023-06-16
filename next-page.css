@@ -1,0 +1,232 @@
+body {
+    
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:pink;
+  }
+
+  .loading-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 9999;
+    overflow: hidden;
+  }
+
+  .falling-books {
+    width: 500px;
+    height: 300px;
+    position: relative;
+    animation:normal 5s linear infinite;
+  }
+
+  .falling-books:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://media.giphy.com/media/kUTME7ABmhYg5J3psM/giphy.gif"); /* Replace with your book GIF */
+   background-repeat: no-repeat;
+   background-size: cover;
+    background-size: cover;
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+  #body{
+    display: none;
+  }
+
+.main-menu{
+
+    background-color: white;
+   
+    background-repeat: no-repeat;
+  
+    width: 100%;
+    height: 150px
+  
+}
+
+
+
+#HOME{
+    margin: 1px 2px;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+.books ul {
+    margin-top:  50px;
+}
+
+.avail{
+  margin-right: 370px;
+  font-weight: bolder ;
+}
+.books ul{
+  
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+   
+  }
+.nav {
+    display: flex;
+  flex-direction: row;
+  font-weight: bolder;
+
+}
+.nav li{
+   list-style-type: none;
+    margin-right: 1000px;
+}
+  button{
+    background-color: black;
+    color: aliceblue;
+  }
+  .books li img{
+   height: 135px ;
+  }
+
+.books ul li{
+    width: 50%;
+    margin-bottom: 40px;
+}
+
+a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+  #loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+    z-index: 999;
+  }
+  
+#title {
+    width: 500px;
+    margin-left: 390px;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin: 0 0 10px 0;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  img {
+    width: 100px;
+ 
+    float: left;
+    margin-right: 10px;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    margin: 0 0 5px 0;
+  }
+  
+  p {
+    margin: 0 0 10px 0;
+  }
+  
+  .availability {
+    float: right;
+  }
+  
+  .cart {
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  
+  .cart h2 {
+    margin: 0 0 10px 0;
+  }
+  
+  .cart ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .cart li {
+    margin-bottom: 10px;
+  }
+  
+  .cart li img {
+    width: 20px;
+    float: left;
+    margin-right: 10px;
+  }
+  
+  .cart li h2 {
+    font-size: 1.5em;
+    margin: 0 0 5px 0;
+  }
+  
+  .cart li p {
+    margin: 0 0 10px 0;
+  }
+  
+  .cart .quantity {
+    float: right;
+  }
+  
+  .cart button {
+    margin-top: 10px;
+  }
+  
+  #search-input{
+    margin-top: 10px;
+   margin-left: 380px;
+   margin-bottom: 20px;
+  }
+
+#cart {
+  border : 25px white solid;
+    margin-top: 50px;
+  background-image: url("cart1.jpg");
+ background-repeat: no-repeat;
+ /* background-attachment: fixed; */
+ background-size: cover;
+
+   padding: 15px;
+ padding-bottom: 3px;
+    height : 1000px;
+    background-color: aliceblue;
+    border: 5px while solid;
+  }
+
+ 
+

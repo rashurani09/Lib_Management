@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="next-page.css">
+  
+</head>
+<body>
+  <div class="loading-container">
+    <div class="falling-books"></div>
+  </div>
+
+
+  <!-- <div id="loading">
+    <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Loading">
+  </div> -->
+  <div id="body">
+<div class="main-menu">
+<div class="nav">
+  <li>
+<a href="next-page.html"><div id ="Home">⬅Back</div></a></li>
+<li ><button style="background-color: white; color: black ; margin-top: 2px;" onclick="redirectToPosition(100, 1500)">My_Cart</button></li>
+
+</div>
+<img src="kids.jpg">
+  <div id="title">
+
+    <h1>Library Management System</h1>
+  </div>
+
+  <div>
+    <input type="text" id="search-input" placeholder="Enter a book title">
+    <button id="search-button" onclick="matchSearchInput()">Search</button>
+  </div>
+  <ul id="book-list"></ul>
+</div>
+<div class="books">
+  <div id="products">
+<ul>
+ <!-- ITEM 1 -->
+    <li data-id="1" data-name="Adventure of Sherlock Holmes" data-price="10.99">
+      <h2>Aventure of Sherlock Holmes</h2>
+       <a href="https://drive.google.com/file/d/1ZDwsj8dTe2QSLMmvmsFGHqyaCO0drWu9/view?usp=drive_link"><img src="Aventure of Sherlock Holmes.jpg" alt="Book">
+          
+          <p>Author name : Arthur Conan Doyle</p>
+          <p>Genre: Mysterious</p>
+          <p>Quantity: <span class="availability avail" >100</span></p>
+          <p>Year of publishing : 1892</p></a>
+          <p class="cart-button" ><button id="products" class="button" onclick="Add(event)" style="background-color: brown;" >Add TO Cart</button></p>
+    </li>
+
+  <!-- ITEM 2 -->
+    <li data-id="2" data-name="Thirty-Nine Steps" data-price="9.99"> 
+      <h2>Thirty-Nine Steps</h2>    
+          <a href="https://drive.google.com/file/d/1QXidST3xrxV8be43K18MkjgDuhYmkiUL/view?usp=sharing"><img src="thirtyninesteps.jpg" alt="Book">
+          
+          <p>Author name :  John Buchan</p>
+          <p>Genre: Mysterious</p>
+          <p>Quantity : <span class="availability avail">9</span></p>
+          <p>Year of publishing : 1915</p>
+        </a>
+        <p " class="cart-button" ><button id="products" class="button" onclick="Add(event)" style="background-color: brown;" > Add TO Cart</button></p>
+    </li>
+
+    <!-- ITEM 3 -->
+    <li data-id="3" data-name="The War of the Worlds" data-price="5.99">
+      <h2>The War of the Worlds</h2>
+          <a href="https://drive.google.com/file/d/11ED7XpkWG6KY7wd1GQm4AwPbQ9lXbfXE/view?usp=sharing"><img src="warofworld.jpg" alt="Book">       
+          
+          <p>Author name :  H.G Wells</p>
+          <p>Genre: Science Fiction</p>
+          <p>Quantity : <span class="availability avail">17</span></p>
+          <p>Year of publishing : 1898</p>
+          </a >
+          <p  class="cart-button" ><button id="products" class="button" onclick="Add(event)" style="background-color: brown;" > Add TO Cart</button></p>
+      </li>
+
+      <!-- ITEM 4 -->
+      <li data-id="4" data-name="After the Cure" data-price="10.00">
+        <h2>After the Cure</h2>
+          <a href="https://drive.google.com/file/d/1Ys39iKqFKkEffwC1YEZWANMPeH5RGN39/view?usp=sharing"><img src="aftercure.jpg" alt="Book">        
+          
+          <p>Author name :  Deirdre Gould</p>
+          <p>Genre: Science Fiction</p>
+          <p>Quantity : <span class="availability avail">22</span></p>
+          <p>Year of publishing : 2013</p>
+        </a>
+        <p class="cart-button" ><button id="products" class="button" onclick="Add(event)" style="background-color: brown;" > Add TO Cart</button></b>
+      </li>
+
+      <!-- ITEM 5 -->
+      <li data-id="5" data-name="Loss Of Reason" data-price="10.99">
+        <h2>Loss Of Reason</h2>
+          <a href="https://drive.google.com/file/d/1U81NjS6GeAg9XH24cxvdioh5u1pHao3e/view?usp=sharing"><img src="Loss of reasons.jpg" alt="Book"></a>        
+          
+          <p>Author name :  Miles A.Maxwell</p>
+          <p>Genre: Action & Adveture</p>
+          <p>Quantity : <span class="availability avail">14</span> </p>
+          <p>Year of publishing : 2015</p>
+          </a>
+          <p class="cart-button" > <button id="products" class="button" onclick="Add(event)" style="background-color: brown;" >Add TO Cart</button></p>
+      </li>
+
+   <!-- ITEM 6 -->
+      <li data-id="6" data-name="The Airlords of Han" data-price="10.51">
+        <h2>The Airlords of Han</h2>
+          <a href="https://drive.google.com/file/d/1d29wotyBZNqsGZlLPX1l0QWb1lPvoSu3/view?usp=sharing"><img src="airloads of han.jpg" alt="Book">       
+          
+          <p>Author name :  Philip Franchis</p>
+          <p>Genre: Action & Adveture</p>
+          <p>Quantity : <span class="availability avail">19</span></p>
+          <p>Year of publishing : 1928</p>
+          </a>
+          <p  class="cart-button" ><button id="products" class="button" onclick="Add(event)" style="background-color: brown;" > Add TO Cart</button></p>
+      </li>
+
+    <!-- ITEM 7 -->
+      <li data-id="7" data-name="To Kill a Mocking - bird" data-price="8">
+        <h2>To Kill a Mocking - bird</h2>
+          <a href="https://drive.google.com/file/d/1rCGZcZEAhQN4nHBWA6Ng9awNhHIe8BZb/view?usp=sharing"><img src="Mockingbird-many-1961.webp" alt="Book">
+          
+          <p>Author name :  Harper Lee</p>
+          <p>Genre: Classic</p>
+          <p>Quantity : <span class="availability avail">24</span></p>
+          <p>Year of publishing</p>
+          </a>
+          <p  class="cart-button" ><button id="products" class="button" onclick="Add(event)" style="background-color: brown;" > Add TO Cart</button></p>
+      </li>
+   
+      <!-- ITEM 8 -->
+      <li data-id="8" data-name="The Hunger Games" data-price="10.99">
+        <h2>The Hunger Games</h2>
+          <a href="https://drive.google.com/file/d/1t83J9mgEojxlucl-coqebZ1PY8VXupT9/view?usp=sharing">
+          <img src="HungerGames.jpg" alt="Book">
+          
+          <p>Author name : Suzanne Collins</p>
+          <p>Genre: Dystopian</p>
+          <p>Quantity :<span class="availability avail">20</span></p>
+          <p>Year of publishing</p>
+        </a>
+        <p class="cart-button" ><button id="products" class="button" onclick="Add(event)" style="background-color: brown;" > Add TO Cart</button></p>
+        </li>
+
+        <!-- ITEM 9 -->
+        <li data-id="9" data-name="The Harry Potte" data-price="4.99">
+          <h2>The Harry Potter</h2>
+          <img src="Harry.png" alt="Book">
+         
+          <p>Markus</p>
+          <p>Genre: Fiction</p>
+          <p>Quantity :<span class="availability avail">14</span></p>
+          <p>Year of publishing : 2017</p>
+          <p  class="cart-button" ><button id="products" class="button" onclick="Add(event)" style="background-color: brown;" > Add TO Cart</button></p>
+        </li>
+
+
+        <!-- ITEM 10 -->
+        <li data-id="10" data-name="The Book Thief" data-price="10.40">
+          <h2>The Book Thief</h2>
+          <a href="https://drive.google.com/file/d/1BJ57BYEqtbjASfxHFqX8KpCpqcdTd5HN/view?usp=sharing"><img src="The_book_Thief.jpg" style="height: 140px ;" alt="Book">
+          
+          <p>Author name :  Markus Zusak</p>
+          <p>Genre: Historical Fiction</p>
+          <p>Quantity : <span class="availability avail">50</span></p>
+          <p>Year of publishing : 2006</p></a>
+          <p  class="cart-button"><button id="products" class="button"   onclick="Add(event)" style="background-color: brown ;" >Add TO Cart</button></p>
+        
+        </li>
+
+        <!-- ITEM 11 -->
+        <li data-id="11" data-name="The Secret Adversary" data-price="5.44">
+          <h2>The Secret Adversary</h2>
+          <a href=""><img src="The Secret Adversary.jpg"  alt="Book">        
+          
+          <p>Author name : Agatha Christie</p>
+          <p>Genre: Mysterious</p>
+          <p>Quantity : <span class="availability avail">11</span></p>
+          <p>Year of publishing : 1992</p>
+        </a>
+        <p  class="cart-button" > <button id="products" class="button" onclick="Add(event)" style="background-color: brown;" >Add TO Cart</button></p>
+        </li>
+        <!-- ITEM 12 -->
+        <li  data-id="1" data-name="Adventure of Sherlock Holmes" data-price="10.99">
+          <h2>Adventure of Sherlock Holmes</h2>
+       <a href="https://drive.google.com/file/d/1ZDwsj8dTe2QSLMmvmsFGHqyaCO0drWu9/view?usp=drive_link"><img src="Aventure of Sherlock Holmes.jpg" alt="Book">
+          
+          <p>Author name : Arthur Conan Doyle</p>
+          <p>Genre: Mysterious</p>
+<p >Quantity : <span class="availability avail">14</span></p>
+          <p>Year of publishing : 1892</p>
+        </a>
+        <p  class="cart-button " ><button  id="products" class="button" onclick="Add(event)" style="background-color: brown;"  >Add TO Cart</button></p>
+        </li>
+      </ul>
+  </div>
+    </div>
+
+<!-- CART -->
+    <div id="cart">
+      <h2 style=" text-align: center;">Shopping Cart</h2>
+      <ul id="cart-items">
+        <!-- Cart items will be dynamically added here -->
+
+  
+  <ul>
+  
+  </ul>
+</div>
+      </ul>
+    </div>
+    
+  <script src="next-page.js"></script>
+
+</body>
+</html>
